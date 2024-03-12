@@ -18,6 +18,9 @@ import AdminLogin from './components/pages/AdminLogin';
 import Test from './components/pages/test';
 import GamePage from './components/pages/GamePage';
 
+//AWS
+
+
 const breakpoint=685;
 function App() {
   const {height, width} = useWindowDimensions();
@@ -73,10 +76,12 @@ function App() {
           path='/test'
           element={<Body><Test /></Body>} 
         />
+        {/*
         <Route
           path='/admin'
           element={<Body><AdminLogin /></Body>} 
         />
+        */}
         <Route 
           path="*"
           element={<NotFound />}
