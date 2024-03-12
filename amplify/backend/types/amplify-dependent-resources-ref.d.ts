@@ -1,14 +1,13 @@
 export type AmplifyDependentResourcesAttributes = {
   "api": {
-    "portfolio": {
-      "GraphQLAPIEndpointOutput": "string",
-      "GraphQLAPIIdOutput": "string",
-      "GraphQLAPIKeyOutput": "string"
-    },
-    "postsAPI": {
+    "AdminQueries": {
       "ApiId": "string",
       "ApiName": "string",
       "RootUrl": "string"
+    },
+    "postAPI": {
+      "GraphQLAPIEndpointOutput": "string",
+      "GraphQLAPIIdOutput": "string"
     }
   },
   "auth": {
@@ -20,9 +19,20 @@ export type AmplifyDependentResourcesAttributes = {
       "UserPoolArn": "string",
       "UserPoolId": "string",
       "UserPoolName": "string"
+    },
+    "userPoolGroups": {
+      "adminGroupRole": "string",
+      "publicGroupRole": "string"
     }
   },
   "function": {
+    "AdminQueries0aa288ed": {
+      "Arn": "string",
+      "LambdaExecutionRole": "string",
+      "LambdaExecutionRoleArn": "string",
+      "Name": "string",
+      "Region": "string"
+    },
     "postsLambda": {
       "Arn": "string",
       "LambdaExecutionRole": "string",

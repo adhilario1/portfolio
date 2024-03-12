@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Footer from './components/Footer';
 import Body from './components/Body';
@@ -19,20 +19,45 @@ import Test from './components/pages/test';
 import GamePage from './components/pages/GamePage';
 
 //AWS
-
-import { Amplify } from 'aws-amplify';
-import { generateClient } from 'aws-amplify/api';
-
-import { createTodo, updateTodo, deleteTodo } from './graphql/mutations';
-
-import { listTodos } from './graphql/queries';
-
-
+import Amplify from 'aws-amplify';
+import { createPost } from './graphql/mutations';
+import { listPosts } from './graphql/queries';
+import { generateClient } from 'aws-amplify/api'
 
 const client = generateClient();
 
+const post = {
+  title: "Test Image 1",
+  type: "image", 
+  year: 2024,
+  description: "this is a test image",
+  discipline: "vid-prod",
+  url: "/assets/images/test-img-1.jpg"
+}
 
+function App() {
+  const [posts, setPosts] = useState([]);
 
+  const create = async () => {
+    const newPost = await client.graphql({
+      query: createPost,
+      variables: {input: post}
+    })
+    return(
+      <>
+      </>
+    )
+  }
+
+  useEffect(() => {
+    create();
+  }, []);
+  return(
+    <>
+    </>
+  )
+}
+/*
 const breakpoint=685;
 function App() {
 
@@ -106,5 +131,7 @@ function App() {
     </div>
   );
 }
-
+*/
 export default App;
+
+

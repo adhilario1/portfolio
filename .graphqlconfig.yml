@@ -1,13 +1,13 @@
 projects:
-  portfolio:
+  postAPI:
     schemaPath: src/graphql/schema.json
     includes:
-      - src/graphql/**/*.js
+      - src/graphql/**/*.ts
     excludes:
       - ./amplify/**
     extensions:
       amplify:
-        codeGenTarget: javascript
+        codeGenTarget: typescript
         generatedFileName: ''
         docsFilePath: src/graphql
 extensions:

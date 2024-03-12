@@ -12,12 +12,6 @@ import './../css/Arcade.css';
 import games from './../../assets/data/games.json';
 
 //aws
-import { generateClient } from 'aws-amplify/api';
-import { createTodo, updateTodo, deleteTodo } from './../../graphql/mutations';
-import { listTodos } from './../../graphql/queries';
-
-const client = generateClient();
-
 
 
 interface Props {

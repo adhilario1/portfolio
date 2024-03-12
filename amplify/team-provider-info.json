@@ -13,18 +13,23 @@
     },
     "categories": {
       "auth": {
-        "portfolio702fa560": {}
-      },
-      "api": {
-        "portfolio": {},
-        "postsAPI": {}
+        "portfolio702fa560": {},
+        "userPoolGroups": {}
       },
       "function": {
         "postsLambda": {
           "dev": "dev-environment",
           "deploymentBucketName": "amplify-amplify2579ccb779894-staging-12459-deployment",
-          "s3Key": "amplify-builds/postsLambda-736a304537764a4b5142-build.zip"
+          "s3Key": "amplify-builds/postsLambda-53514c41313176303374-build.zip"
+        },
+        "AdminQueries0aa288ed": {
+          "deploymentBucketName": "amplify-amplify2579ccb779894-staging-12459-deployment",
+          "s3Key": "amplify-builds/AdminQueries0aa288ed-4174624d4d5868736731-build.zip"
         }
+      },
+      "api": {
+        "postAPI": {},
+        "AdminQueries": {}
       }
     }
   }
