@@ -20,17 +20,6 @@ import GamePage from './components/pages/GamePage';
 
 //AWS
 
-import { Amplify } from 'aws-amplify';
-import { generateClient } from 'aws-amplify/api';
-
-import { createTodo, updateTodo, deleteTodo } from './graphql/mutations';
-
-import { listTodos } from './graphql/queries';
-
-
-
-const client = generateClient();
-
 
 
 const breakpoint=685;
