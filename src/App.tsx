@@ -20,9 +20,22 @@ import GamePage from './components/pages/GamePage';
 
 //AWS
 
+import { Amplify } from 'aws-amplify';
+import { generateClient } from 'aws-amplify/api';
+
+import { createTodo, updateTodo, deleteTodo } from './graphql/mutations';
+
+import { listTodos } from './graphql/queries';
+
+
+
+const client = generateClient();
+
+
 
 const breakpoint=685;
 function App() {
+
   const {height, width} = useWindowDimensions();
 
   var device;
@@ -76,12 +89,12 @@ function App() {
           path='/test'
           element={<Body><Test /></Body>} 
         />
-        {/*
+        
         <Route
           path='/admin'
           element={<Body><AdminLogin /></Body>} 
         />
-        */}
+       
         <Route 
           path="*"
           element={<NotFound />}

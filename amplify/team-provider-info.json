@@ -14,6 +14,17 @@
     "categories": {
       "auth": {
         "portfolio702fa560": {}
+      },
+      "api": {
+        "portfolio": {},
+        "postsAPI": {}
+      },
+      "function": {
+        "postsLambda": {
+          "dev": "dev-environment",
+          "deploymentBucketName": "amplify-amplify2579ccb779894-staging-12459-deployment",
+          "s3Key": "amplify-builds/postsLambda-736a304537764a4b5142-build.zip"
+        }
       }
     }
   }

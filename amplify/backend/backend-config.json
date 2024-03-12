@@ -1,4 +1,36 @@
 {
+  "api": {
+    "portfolio": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    },
+    "postsAPI": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "postsLambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
     "portfolio702fa560": {
       "customAuth": false,
@@ -23,6 +55,40 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "function": {
+    "postsLambda": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_postsLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "postsLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_postsLambda_dev": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "postsLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_postsLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "postsLambda"
+        }
+      ]
     }
   }
 }
